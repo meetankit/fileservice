@@ -3,24 +3,29 @@ package com.storage.dao;
 import java.util.Collection;
 import java.util.Map;
 
-import com.storage.dto.FileDto;
+import javax.transaction.Transactional;
 
-public class FileDaoImpl implements FileDao {
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+import com.storage.dto.Files;
+
+public class FileDaoImpl extends HibernateDaoSupport implements FileDao {
 
 	@Override
-	public FileDto createOrUpdate(FileDto hostedFile) {
+	@Transactional
+	public Files createOrUpdate(Files hostedFile) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public FileDto findById(long fileKey) {
+	public Files findById(long fileKey) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Collection<FileDto> findByParameters(Map<String, Object> parameters) {
+	public Collection<Files> findByParameters(Map<String, Object> parameters) {
 		// TODO Auto-generated method stub
 		return null;
 	}

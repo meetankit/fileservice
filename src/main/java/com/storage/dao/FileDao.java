@@ -3,14 +3,14 @@ package com.storage.dao;
 import java.util.Collection;
 import java.util.Map;
 
-import com.storage.dto.FileDto;
+import com.storage.dto.Files;
 
 public interface FileDao {
 
-    FileDto createOrUpdate(FileDto hostedFile);
+    Files createOrUpdate(Files hostedFile);
 
-    FileDto findById(long fileKey);
+    Files findById(long fileKey);
 
-    Collection<FileDto> findByParameters(Map<String, Object> parameters);
+    Collection<Files> findByParameters(Map<String, Object> parameters);
 
 }

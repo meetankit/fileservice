@@ -2,9 +2,19 @@ package com.storage.dto;
 
 import java.io.Serializable;
 
-public class FileDto implements Serializable {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-	private static final long serialVersionUID = 1L;
+@Entity
+@Table(name = "EMPLOYEE")
+public class Files implements Serializable {
+	
+	@Id
+	@GeneratedValue
+	@Column(name="filekey")
 	private Long id;
     private String title;
     private Long sizeInBytes;

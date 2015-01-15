@@ -13,6 +13,13 @@ public class FileUploadRequest {
 	private String provider;
 	private String description;
 	private String contentType;
+	private String fileUrl;
+	public String getFileUrl() {
+		return fileUrl;
+	}
+	public void setFileUrl(String fileUrl) {
+		this.fileUrl = fileUrl;
+	}
 	public MultipartFile getFile() {
 		return file;
 	}
