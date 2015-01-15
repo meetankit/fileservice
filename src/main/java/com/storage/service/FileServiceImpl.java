@@ -31,7 +31,6 @@ public class FileServiceImpl implements FileService {
 	@Override
 	public Map<String, Object> upload(FileUploadRequest fileUploadRequest) {
 		Files file = new Files();
-		file.setCreateDate(System.currentTimeMillis());
 		file.setDescription(fileUploadRequest.getDescription());
 		file.setPreviewUrl(fileUploadRequest.getFileUrl());
 		if(fileUploadRequest.getFile() != null) {

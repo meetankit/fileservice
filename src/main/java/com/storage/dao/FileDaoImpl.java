@@ -13,6 +13,9 @@ public class FileDaoImpl extends HibernateDaoSupport implements FileDao {
 	@Override
 	@Transactional(readOnly = false)
 	public Files createOrUpdate(Files file) {
+		if(file.getId() == null || file.getId() == 0L) {
+			file.setId(UniqueIdGenerator.generate(0));
+		}
         getHibernateTemplate().saveOrUpdate(file);
         return file;
 	}

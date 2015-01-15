@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,17 +13,14 @@ public class Files implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue
 	@Column(name="filekey")
 	private Long id;
-	@Column(name="title")
+	@Column(name="name")
     private String title;
-	@Column(name="sizeInBytes")
+	@Column(name="filesize")
     private Long sizeInBytes;
 	@Column(name="status")
     private String status;
-	@Column(name="createDate")
-    private Long createDate;
 	@Column(name="description")
     private String description;
 	@Column(name="previewUrl")
@@ -54,12 +50,6 @@ public class Files implements Serializable {
 	}
 	public void setStatus(String status) {
 		this.status = status;
-	}
-	public Long getCreateDate() {
-		return createDate;
-	}
-	public void setCreateDate(Long createDate) {
-		this.createDate = createDate;
 	}
 	public String getDescription() {
 		return description;
