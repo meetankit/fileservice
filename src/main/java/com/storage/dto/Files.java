@@ -9,21 +9,27 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "EMPLOYEE")
+@Table(name = "FILES")
 public class Files implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue
 	@Column(name="filekey")
 	private Long id;
+	@Column(name="title")
     private String title;
+	@Column(name="sizeInBytes")
     private Long sizeInBytes;
+	@Column(name="status")
     private String status;
-    private Long uploadedBy;
+	@Column(name="createDate")
     private Long createDate;
-    private String shortDescription;
-    private String longDescription;
+	@Column(name="description")
+    private String description;
+	@Column(name="previewUrl")
     private String previewUrl;
+	@Column(name="uploadedTo")
     private String uploadedTo;
 	public Long getId() {
 		return id;
@@ -49,29 +55,17 @@ public class Files implements Serializable {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public Long getUploadedBy() {
-		return uploadedBy;
-	}
-	public void setUploadedBy(Long uploadedBy) {
-		this.uploadedBy = uploadedBy;
-	}
 	public Long getCreateDate() {
 		return createDate;
 	}
 	public void setCreateDate(Long createDate) {
 		this.createDate = createDate;
 	}
-	public String getShortDescription() {
-		return shortDescription;
+	public String getDescription() {
+		return description;
 	}
-	public void setShortDescription(String shortDescription) {
-		this.shortDescription = shortDescription;
-	}
-	public String getLongDescription() {
-		return longDescription;
-	}
-	public void setLongDescription(String longDescription) {
-		this.longDescription = longDescription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	public String getPreviewUrl() {
 		return previewUrl;

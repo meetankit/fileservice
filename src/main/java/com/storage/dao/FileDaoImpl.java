@@ -13,15 +13,9 @@ public class FileDaoImpl extends HibernateDaoSupport implements FileDao {
 
 	@Override
 	@Transactional
-	public Files createOrUpdate(Files hostedFile) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Files findById(long fileKey) {
-		// TODO Auto-generated method stub
-		return null;
+	public Files createOrUpdate(Files file) {
+        getHibernateTemplate().saveOrUpdate(file);
+        return file;
 	}
 
 	@Override
