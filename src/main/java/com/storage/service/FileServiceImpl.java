@@ -39,7 +39,7 @@ public class FileServiceImpl implements FileService {
 			file.setTitle(fileUploadRequest.getFile().getOriginalFilename());
 		}
 		file.setStatus(FileStatus.UPLOAD_COMPLETE.name());
-		file.setUploadedTo(fileUploadRequest.getProvider());
+		file.setUploadedTo(fileUploadRequest.getProvider().name());
 		file = fileDao.createOrUpdate(file);
 		Map<String, Object> files = new HashMap<String, Object>();
 		files.put("fileKey", file.getId());

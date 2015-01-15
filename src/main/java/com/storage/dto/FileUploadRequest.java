@@ -10,10 +10,11 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileUploadRequest {
 	
 	private MultipartFile file;
-	private String provider;
+	private Provider provider;
 	private String description;
-	private String contentType;
+	private ContentType contentType;
 	private String fileUrl;
+	
 	public String getFileUrl() {
 		return fileUrl;
 	}
@@ -26,10 +27,10 @@ public class FileUploadRequest {
 	public void setFile(MultipartFile file) {
 		this.file = file;
 	}
-	public String getProvider() {
+	public Provider getProvider() {
 		return provider;
 	}
-	public void setProvider(String provider) {
+	public void setProvider(Provider provider) {
 		this.provider = provider;
 	}
 	public String getDescription() {
@@ -38,10 +39,10 @@ public class FileUploadRequest {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getContentType() {
+	public ContentType getContentType() {
 		return contentType;
 	}
-	public void setContentType(String contentType) {
+	public void setContentType(ContentType contentType) {
 		this.contentType = contentType;
 	}
 	
